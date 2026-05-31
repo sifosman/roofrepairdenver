@@ -1,18 +1,17 @@
 "use client";
 
-const EMAIL = "info@roofrepairdenver.com";
-const DOMAIN = "roofrepairdenver.com";
+const FORMSPREE_ID = "YOUR_FORM_ID";
 
 export default function ContactForm() {
   return (
     <form
-      action={`https://formsubmit.co/${EMAIL}`}
+      action={`https://formspree.io/f/${FORMSPREE_ID}`}
       method="POST"
       className="flex flex-col gap-4"
     >
-      <input type="hidden" name="_subject" value={`New Lead from ${DOMAIN}`} />
+      <input type="hidden" name="_subject" value="New Roof Repair Lead - Denver" />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value={`https://${DOMAIN}/?sent=1`} />
+      <input type="hidden" name="_next" value="https://roofrepairdenver.com/?sent=1" />
 
       <div>
         <label className="font-bold text-sm tracking-wider text-[#c8c5cd] block mb-2 uppercase">
