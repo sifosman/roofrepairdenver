@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface: #121414;
+  --color-surface-dim: #121414;
+  --color-surface-bright: #38393a;
+  --color-surface-container: #1e2020;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #333535;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #c8c5cd;
+  --color-surface-container-lowest: #0c0f0f;
+  --color-surface-container-low: #1a1c1c;
+  --color-primary: #c6c4df;
+  --color-on-primary: #2f2e43;
+  --color-primary-container: #1a1a2e;
+  --color-on-primary-container: #83829b;
+  --color-secondary: #bbc5eb;
+  --color-secondary-container: #3b4665;
+  --color-on-secondary-container: #aab4d9;
+  --color-outline: #929097;
+  --color-outline-variant: #47464c;
+  --color-background: #121414;
+  --color-on-background: #e2e2e2;
+  --color-accent-red: #e94560;
+  --color-success-green: #0f9b0f;
+  --color-card-bg: #16213e;
+  --font-display: "Anton", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121414;
+  color: #e2e2e2;
+  font-family: "Work Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: "Anton", sans-serif;
+}
+
+.font-body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.btn-primary {
+  background-color: #e94560;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 56px;
+  border-bottom: 2px solid #b33348;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 32px;
+  border-radius: 4px;
+}
+.btn-primary:hover {
+  background-color: #ff5a77;
+  transform: translateY(2px);
+  border-bottom-width: 0px;
+  margin-bottom: 2px;
+}
+
+.btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 56px;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 32px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.input-dark {
+  background-color: #16213e;
+  border: 1px solid #929097;
+  color: #ffffff;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.input-dark:focus {
+  border-color: #e94560;
+  box-shadow: 0 0 0 2px rgba(233,69,96,0.3);
+  outline: none;
+}
+
+.card-dark {
+  background-color: #16213e;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.5);
+  border: 1px solid #47464c;
+  border-radius: 4px;
+}
+
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #1e2020;
+  color: #c8c5cd;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid #929097;
+  border-radius: 4px;
+}
+
+.success-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(15,155,15,0.2);
+  color: #0f9b0f;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid #0f9b0f;
+  border-radius: 4px;
+}
+
+.service-card {
+  background-color: #16213e;
+  border: 1px solid #47464c;
+  border-radius: 4px;
+  padding: 32px;
+  transition: all 0.2s;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.5);
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.5);
+}
+
+.testimonial-card {
+  background-color: #16213e;
+  border: 1px solid #47464c;
+  border-radius: 4px;
+  padding: 32px;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.5);
+}
+
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  color: #e2e2e2;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.faq-btn:hover {
+  background-color: rgba(255,255,255,0.03);
+}
+.faq-btn::after {
+  content: "+";
+  font-size: 24px;
+  color: #e94560;
+  transition: transform 0.2s;
+}
+
+.faq-item.active .faq-btn::after {
+  content: "\2212";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 24px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 20px;
+}
+
+.section-heading {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #e2e2e2;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
