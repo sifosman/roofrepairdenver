@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Insurance Claims Help Denver CO | 500+ Claims Filed",
   description: "Expert roof insurance claim help in Denver, CO. We fight your insurance so you don't have to. 500+ successful claims. Serving Denver metro. Call (720) 555-0199.",
   keywords: "roof insurance claim denver, insurance claim help denver, roofing insurance denver, hail damage insurance denver",
-  alternates: { canonical: "https://roofrepairdenver.com/services/insurance-claim-help" },
+  alternates: { canonical: "https://roofrepairindenver.com/services/insurance-claim-help" },
 };
 
 const serviceSchema = {
@@ -19,7 +19,7 @@ const serviceSchema = {
     "@type": "RoofingContractor",
     "name": "Denver Roof Repair Pros",
     "telephone": "+17205550199",
-    "url": "https://roofrepairdenver.com/",
+    "url": "https://roofrepairindenver.com/",
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",

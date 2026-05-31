@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Free Roof Inspection Denver CO | Drone & Thermal Imaging",
   description: "Free roof inspections in Denver, CO. Drone technology, thermal imaging, insurance-grade reports. Serving Denver metro area. Call (720) 555-0199.",
   keywords: "free roof inspection denver, roof inspection denver co, drone roof inspection denver, thermal imaging roof inspection denver",
-  alternates: { canonical: "https://roofrepairdenver.com/services/roof-inspection" },
+  alternates: { canonical: "https://roofrepairindenver.com/services/roof-inspection" },
 };
 
 const serviceSchema = {
@@ -19,7 +19,7 @@ const serviceSchema = {
     "@type": "RoofingContractor",
     "name": "Denver Roof Repair Pros",
     "telephone": "+17205550199",
-    "url": "https://roofrepairdenver.com/",
+    "url": "https://roofrepairindenver.com/",
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Repair Boulder CO | Local Same-Day Service",
   description: "Professional roof repair in Boulder, Colorado. Emergency service, hail damage, leak repair. Serving all Boulder neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair boulder co, boulder roofing contractor, boulder roof replacement, hail damage repair boulder, emergency roof repair boulder",
-  alternates: { canonical: "https://roofrepairdenver.com/areas/boulder" },
+  alternates: { canonical: "https://roofrepairindenver.com/areas/boulder" },
 };
 
 const localSchema = {
@@ -16,7 +16,7 @@ const localSchema = {
   "@type": "RoofingContractor",
   "name": "Denver Roof Repair Pros",
   "telephone": "+17205550199",
-  "url": "https://roofrepairdenver.com/",
+  "url": "https://roofrepairindenver.com/",
   "areaServed": { "@type": "City", "name": "Boulder", "containedInPlace": { "@type": "State", "name": "Colorado" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
 };

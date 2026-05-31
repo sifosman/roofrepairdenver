@@ -11,7 +11,7 @@ export default function ContactForm() {
     >
       <input type="hidden" name="_subject" value="New Roof Repair Lead - Denver" />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://roofrepairdenver.com/?sent=1" />
+      <input type="hidden" name="_next" value="https://roofrepairindenver.com/?sent=1" />
 
       <div>
         <label className="font-bold text-sm tracking-wider text-[#c8c5cd] block mb-2 uppercase">

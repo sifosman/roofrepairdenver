@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Repair Aurora CO | Local Same-Day Service",
   description: "Professional roof repair in Aurora, Colorado. Emergency service, hail damage, leak repair. Serving all Aurora neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair aurora co, aurora roofing contractor, aurora roof replacement, hail damage repair aurora, emergency roof repair aurora",
-  alternates: { canonical: "https://roofrepairdenver.com/areas/aurora" },
+  alternates: { canonical: "https://roofrepairindenver.com/areas/aurora" },
 };
 
 const localSchema = {
@@ -16,7 +16,7 @@ const localSchema = {
   "@type": "RoofingContractor",
   "name": "Denver Roof Repair Pros",
   "telephone": "+17205550199",
-  "url": "https://roofrepairdenver.com/",
+  "url": "https://roofrepairindenver.com/",
   "areaServed": { "@type": "City", "name": "Aurora", "containedInPlace": { "@type": "State", "name": "Colorado" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
 };

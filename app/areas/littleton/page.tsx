@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Repair Littleton CO | Local Same-Day Service",
   description: "Professional roof repair in Littleton, Colorado. Emergency service, hail damage, leak repair. Serving all Littleton neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair littleton co, littleton roofing contractor, littleton roof replacement, hail damage repair littleton, emergency roof repair littleton",
-  alternates: { canonical: "https://roofrepairdenver.com/areas/littleton" },
+  alternates: { canonical: "https://roofrepairindenver.com/areas/littleton" },
 };
 
 const localSchema = {
@@ -16,7 +16,7 @@ const localSchema = {
   "@type": "RoofingContractor",
   "name": "Denver Roof Repair Pros",
   "telephone": "+17205550199",
-  "url": "https://roofrepairdenver.com/",
+  "url": "https://roofrepairindenver.com/",
   "areaServed": { "@type": "City", "name": "Littleton", "containedInPlace": { "@type": "State", "name": "Colorado" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
 };

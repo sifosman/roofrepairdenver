@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Google-Extended", allow: "/" },
       { userAgent: "Anthropic-AI", allow: "/" },
     ],
-    sitemap: "https://roofrepairdenver.com/sitemap.xml",
+    sitemap: "https://roofrepairindenver.com/sitemap.xml",
   };
 }

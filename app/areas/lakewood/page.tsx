@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Repair Lakewood CO | Local Same-Day Service",
   description: "Professional roof repair in Lakewood, Colorado. Emergency service, hail damage, leak repair. Serving all Lakewood neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair lakewood co, lakewood roofing contractor, lakewood roof replacement, hail damage repair lakewood, emergency roof repair lakewood",
-  alternates: { canonical: "https://roofrepairdenver.com/areas/lakewood" },
+  alternates: { canonical: "https://roofrepairindenver.com/areas/lakewood" },
 };
 
 const localSchema = {
@@ -16,7 +16,7 @@ const localSchema = {
   "@type": "RoofingContractor",
   "name": "Denver Roof Repair Pros",
   "telephone": "+17205550199",
-  "url": "https://roofrepairdenver.com/",
+  "url": "https://roofrepairindenver.com/",
   "areaServed": { "@type": "City", "name": "Lakewood", "containedInPlace": { "@type": "State", "name": "Colorado" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
 };

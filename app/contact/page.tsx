@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: "Contact Denver Roof Repair Pros | Roof Repair in Denver",
   description: "Contact Denver Roof Repair Pros for roof repair in Denver, CO. Call (720) 555-0199 or fill out our form. 24/7 emergency service available.",
   keywords: "contact denver roof repair, denver roofing contact, roof repair quote denver",
-  alternates: { canonical: "https://roofrepairdenver.com/contact" },
+  alternates: { canonical: "https://roofrepairindenver.com/contact" },
 };
 
 const PHONE = "(720) 555-0199";
 const PHONE_HREF = "tel:+17205550199";
-const EMAIL = "info@roofrepairdenver.com";
+const EMAIL = "info@roofrepairindenver.com";
 
 export default function ContactPage() {
   return (

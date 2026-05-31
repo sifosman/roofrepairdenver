@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Repair Denver CO | Local Same-Day Service",
   description: "Professional roof repair in Denver, Colorado. Emergency service, hail damage, leak repair, and full replacements. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair denver, roof repair denver co, denver roofing contractor, denver roof replacement, denver hail damage repair",
-  alternates: { canonical: "https://roofrepairdenver.com/areas/denver" },
+  alternates: { canonical: "https://roofrepairindenver.com/areas/denver" },
 };
 
 const localSchema = {
@@ -16,7 +16,7 @@ const localSchema = {
   "@type": "RoofingContractor",
   "name": "Denver Roof Repair Pros",
   "telephone": "+17205550199",
-  "url": "https://roofrepairdenver.com/",
+  "url": "https://roofrepairindenver.com/",
   "areaServed": { "@type": "City", "name": "Denver", "containedInPlace": { "@type": "State", "name": "Colorado" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
 };

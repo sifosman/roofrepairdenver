@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const PHONE = "(720) 555-0199";
 const PHONE_HREF = "tel:+17205550199";
-const EMAIL = "info@roofrepairdenver.com";
+const EMAIL = "info@roofrepairindenver.com";
 
 export default function SiteFooter() {
   return (

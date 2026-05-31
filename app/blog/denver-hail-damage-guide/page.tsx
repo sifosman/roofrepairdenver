@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Everything Denver Homeowners Should Know After a Hailstorm | Denver Roof Repair Pros",
   description: "Denver gets more hail than any major US city. Here's exactly what to check, what insurance covers, and how to file your roof repair claim.",
   keywords: "denver hail damage, hail damage roof denver, what to do after hailstorm denver, roof hail damage insurance denver",
-  alternates: { canonical: "https://roofrepairdenver.com/blog/denver-hail-damage-guide" },
+  alternates: { canonical: "https://roofrepairindenver.com/blog/denver-hail-damage-guide" },
 };
 
 const articleSchema = {
@@ -19,11 +19,11 @@ const articleSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairdenver.com/favicon.svg" },
+    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
   },
   "datePublished": "2026-05-15",
   "dateModified": "2026-05-15",
-  "url": "https://roofrepairdenver.com/blog/denver-hail-damage-guide",
+  "url": "https://roofrepairindenver.com/blog/denver-hail-damage-guide",
 };
 
 const PHONE = "(720) 555-0199";

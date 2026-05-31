@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About Denver Roof Repair Pros | Trusted Roof Repair in Denver",
   description: "Learn about Denver Roof Repair Pros. 14+ years protecting Colorado homes. Licensed, insured, and committed to quality. Serving Denver metro area.",
   keywords: "about denver roof repair pros, denver roofing company, denver roofing contractor about us",
-  alternates: { canonical: "https://roofrepairdenver.com/about" },
+  alternates: { canonical: "https://roofrepairindenver.com/about" },
 };
 
 const PHONE = "(720) 555-0199";

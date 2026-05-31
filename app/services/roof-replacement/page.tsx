@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Replacement Denver CO | Full Re-Roofing Service",
   description: "Full roof replacement in Denver, CO. Architectural shingles, metal roofing, flat systems. Serving Denver, Aurora, Lakewood. Free estimates. Call (720) 555-0199.",
   keywords: "roof replacement denver, full roof replacement denver, re-roofing denver, new roof denver, roof installation denver",
-  alternates: { canonical: "https://roofrepairdenver.com/services/roof-replacement" },
+  alternates: { canonical: "https://roofrepairindenver.com/services/roof-replacement" },
 };
 
 const serviceSchema = {
@@ -19,7 +19,7 @@ const serviceSchema = {
     "@type": "RoofingContractor",
     "name": "Denver Roof Repair Pros",
     "telephone": "+17205550199",
-    "url": "https://roofrepairdenver.com/",
+    "url": "https://roofrepairindenver.com/",
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",

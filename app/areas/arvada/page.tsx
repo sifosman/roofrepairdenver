@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Roof Repair Arvada CO | Local Same-Day Service",
   description: "Professional roof repair in Arvada, Colorado. Emergency service, hail damage, leak repair. Serving all Arvada neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair arvada co, arvada roofing contractor, arvada roof replacement, hail damage repair arvada, emergency roof repair arvada",
-  alternates: { canonical: "https://roofrepairdenver.com/areas/arvada" },
+  alternates: { canonical: "https://roofrepairindenver.com/areas/arvada" },
 };
 
 const localSchema = {
@@ -16,7 +16,7 @@ const localSchema = {
   "@type": "RoofingContractor",
   "name": "Denver Roof Repair Pros",
   "telephone": "+17205550199",
-  "url": "https://roofrepairdenver.com/",
+  "url": "https://roofrepairindenver.com/",
   "areaServed": { "@type": "City", "name": "Arvada", "containedInPlace": { "@type": "State", "name": "Colorado" } },
   "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
 };

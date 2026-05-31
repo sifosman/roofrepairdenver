@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     "Professional roof repair in Denver, CO. Emergency roof repair available 24/7. Licensed roofers serving the Denver metro area including Aurora, Lakewood, Littleton. Call (720) 555-0199 for fast, reliable service.",
   keywords:
     "roof repair denver, roof repair denver co, emergency roof repair denver, hail damage repair denver, roof replacement denver, roof inspection denver, roofing contractor denver, aurora roof repair, lakewood roof repair, littleton roof repair",
-  metadataBase: new URL("https://roofrepairdenver.com"),
-  alternates: { canonical: "https://roofrepairdenver.com/" },
+  metadataBase: new URL("https://roofrepairindenver.com"),
+  alternates: { canonical: "https://roofrepairindenver.com/" },
   openGraph: {
     title: "Best Roof Repair in Denver, CO | Denver Roof Repair Pros",
     description:
       "Professional roof repair in Denver, CO. Emergency roof repair available 24/7. Licensed roofers serving the Denver metro area.",
-    url: "https://roofrepairdenver.com/",
+    url: "https://roofrepairindenver.com/",
     siteName: "Denver Roof Repair Pros",
     type: "website",
   },
@@ -37,7 +37,7 @@ const localBusinessSchema = {
   "name": "Denver Roof Repair Pros",
   "description":
     "Professional roof repair, hail damage restoration, emergency roof repair, and insurance claim assistance in Denver, Colorado and surrounding metro areas.",
-  "url": "https://roofrepairdenver.com",
+  "url": "https://roofrepairindenver.com",
   "telephone": "+17205550199",
   "address": {
     "@type": "PostalAddress",

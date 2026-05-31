@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Emergency Roof Repair Denver CO | 24/7 Storm Damage Service",
   description: "24/7 emergency roof repair in Denver, CO. Storm damage, fallen trees, sudden leaks — 60-min arrival. Serving Denver, Aurora, Lakewood. Call (720) 555-0199 now.",
   keywords: "emergency roof repair denver, 24/7 roof repair denver, storm damage roof repair denver, emergency roofing contractor denver",
-  alternates: { canonical: "https://roofrepairdenver.com/services/emergency-roof-repair" },
+  alternates: { canonical: "https://roofrepairindenver.com/services/emergency-roof-repair" },
 };
 
 const serviceSchema = {
@@ -19,7 +19,7 @@ const serviceSchema = {
     "@type": "RoofingContractor",
     "name": "Denver Roof Repair Pros",
     "telephone": "+17205550199",
-    "url": "https://roofrepairdenver.com/",
+    "url": "https://roofrepairindenver.com/",
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",
