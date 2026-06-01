@@ -15,18 +15,24 @@ export default function SiteHeader() {
         <Link href="/" className="font-display text-2xl text-[#e2e2e2] uppercase tracking-tighter no-underline">
           Denver Roof Repair Pros
         </Link>
-        <nav className="hidden md:flex gap-8">
-          <Link href="/#services" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
+        <nav className="hidden md:flex gap-6 items-center">
+          <Link href="/services/hail-damage-repair" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
             Services
           </Link>
-          <Link href="/#why-us" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
-            Why Us
+          <Link href="/guides/hail-damage-denver" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
+            Guides
           </Link>
-          <Link href="/#reviews" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
-            Reviews
+          <Link href="/blog/denver-hail-damage-guide" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
+            Blog
           </Link>
-          <Link href="/#faq" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
-            FAQ
+          <Link href="/areas-we-serve" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
+            Areas
+          </Link>
+          <Link href="/materials/asphalt-shingles-denver" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
+            Materials
+          </Link>
+          <Link href="/resources/denver-building-permits" className="text-[#c8c5cd] hover:text-[#e2e2e2] font-bold text-sm tracking-wider transition-colors no-underline uppercase">
+            Resources
           </Link>
         </nav>
         <div className="flex items-center gap-4">
@@ -52,17 +58,23 @@ export default function SiteHeader() {
       </div>
       {mobileOpen && (
         <div className="md:hidden bg-[#121414] border-b border-[#929097] px-6 py-6 flex flex-col gap-4">
-          <Link href="/#services" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
+          <Link href="/services/hail-damage-repair" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
             Services
           </Link>
-          <Link href="/#why-us" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
-            Why Us
+          <Link href="/guides/hail-damage-denver" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
+            Guides
           </Link>
-          <Link href="/#reviews" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
-            Reviews
+          <Link href="/blog/denver-hail-damage-guide" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
+            Blog
           </Link>
-          <Link href="/#faq" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
-            FAQ
+          <Link href="/areas-we-serve" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
+            Areas
+          </Link>
+          <Link href="/materials/asphalt-shingles-denver" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
+            Materials
+          </Link>
+          <Link href="/resources/denver-building-permits" onClick={() => setMobileOpen(false)} className="font-bold text-sm tracking-wider text-[#c8c5cd] uppercase no-underline">
+            Resources
           </Link>
           <a href={PHONE_HREF} className="font-bold text-sm tracking-wider text-[#e94560] uppercase no-underline">
             📞 {PHONE}
