@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Roof Repair Arvada CO | Local Same-Day Service",
-  description: "Professional roof repair in Arvada, Colorado. Emergency service, hail damage, leak repair. Serving all Arvada neighborhoods. Free estimates. Call (720) 555-0199.",
+  description: "Professional roof repair in Arvada, Colorado. Emergency service, hail damage, leak repair. All neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair arvada co, arvada roofing contractor, arvada roof replacement, hail damage repair arvada, emergency roof repair arvada",
   alternates: { canonical: "https://roofrepairindenver.com/areas/arvada" },
 };

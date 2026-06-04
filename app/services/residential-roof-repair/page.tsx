@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Residential Roof Repair Denver CO | Expert Home Roofing",
-  description: "Expert residential roof repair in Denver, CO. Leak fixes, shingle replacement, storm damage. Serving Denver, Aurora, Lakewood, Littleton. Free estimates. Call (720) 555-0199.",
+  description: "Expert residential roof repair in Denver, CO. Leak fixes, shingle replacement, storm damage. Serving Denver, Aurora, Lakewood. Free estimates.",
   keywords: "residential roof repair denver, home roof repair denver, shingle repair denver, roof leak repair denver, denver residential roofing",
   alternates: { canonical: "https://roofrepairindenver.com/services/residential-roof-repair" },
 };

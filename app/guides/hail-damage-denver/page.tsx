@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Complete Guide to Roof Hail Damage in Denver (2026) | Denver Roof Repair Pros",
-  description: "Denver is the hail capital of the U.S. Learn exactly how hail damages roofs, what to check after a storm, insurance claim deadlines, and repair costs. Data-driven guide.",
+  description: "Denver is the hail capital of the U.S. Learn how hail damages roofs, what to check after a storm, insurance claim deadlines, and repair costs.",
   keywords: "denver hail damage roof, hail damage repair denver, roof hail damage guide colorado, denver hail capital, hail insurance claim denver",
   alternates: { canonical: "https://roofrepairindenver.com/guides/hail-damage-denver" },
 };

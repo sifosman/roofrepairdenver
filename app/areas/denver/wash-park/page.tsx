@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Roof Repair Washington Park Denver | Historic Home Specialists",
-  description: "Expert roof repair in Washington Park, Denver. Historic homes, cedar shake, slate, and asphalt. Free inspections. We understand Wash Park's unique roofing needs.",
+  description: "Expert roof repair in Washington Park, Denver. Historic homes, cedar shake, slate, asphalt. Free inspections. Call (720) 555-0199.",
   keywords: "roof repair wash park, washington park denver roofing, historic roof repair denver, cedar shake roof denver",
   alternates: { canonical: "https://roofrepairindenver.com/areas/denver/wash-park" },
 };

@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   title: "Best Roof Repair in Denver, CO | Denver Roof Repair Pros",
   description:
-    "Professional roof repair in Denver, CO. Emergency roof repair available 24/7. Licensed roofers serving the Denver metro area including Aurora, Lakewood, Littleton. Call (720) 555-0199 for fast, reliable service.",
+    "Professional roof repair in Denver, CO. Emergency service available 24/7. Licensed roofers serving Aurora, Lakewood & Littleton. Call (720) 555-0199.",
   keywords:
     "roof repair denver, roof repair denver co, emergency roof repair denver, hail damage repair denver, roof replacement denver, roof inspection denver, roofing contractor denver, aurora roof repair, lakewood roof repair, littleton roof repair",
   metadataBase: new URL("https://roofrepairindenver.com"),

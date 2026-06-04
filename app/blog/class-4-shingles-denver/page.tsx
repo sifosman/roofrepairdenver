@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Class 4 Impact-Resistant Shingles: Are They Worth It in Denver? | Denver Roof Repair Pros",
-  description: "Class 4 shingles withstand 2-inch steel ball impacts. In Denver — the hail capital — they can mean the difference between a repair and a full replacement. Cost, insurance discounts, and ROI breakdown.",
+  description: "Class 4 shingles withstand 2-inch steel ball impacts. In Denver's hail capital, they can mean the difference between repair and replacement.",
   keywords: "class 4 shingles denver, impact resistant shingles colorado, hail proof roof denver, class 4 roof insurance discount",
   alternates: { canonical: "https://roofrepairindenver.com/blog/class-4-shingles-denver" },
 };

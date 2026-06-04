@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Hail Damage Roof Repair Denver CO | Insurance Claims Help",
-  description: "Denver's #1 hail damage roof repair specialists. Insurance claims, assessment, full restoration. Serving Denver, Aurora, Lakewood. 500+ claims filed. Call (720) 555-0199.",
+  description: "Denver's #1 hail damage roof repair specialists. Insurance claims, assessment, full restoration. Serving Denver, Aurora, Lakewood. Call now.",
   keywords: "hail damage repair denver, hail damage roof repair denver, roof insurance claim denver, denver hail damage roofing",
   alternates: { canonical: "https://roofrepairindenver.com/services/hail-damage-repair" },
 };

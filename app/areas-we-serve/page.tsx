@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Service Areas | Denver Roof Repair Pros — Roof Repair in Denver Metro",
-  description: "We provide roof repair throughout the Denver metro area. Including Denver, Aurora, Lakewood, Littleton, Arvada, Boulder, Westminster, Thornton, and more. Call (720) 555-0199.",
+  description: "Roof repair throughout the Denver metro area. Denver, Aurora, Lakewood, Littleton, Arvada, Boulder, Westminster, Thornton & more. Call (720) 555-0199.",
   keywords: "roof repair denver metro, roof repair aurora, roof repair lakewood, roof repair littleton, roof repair arvada, roof repair boulder, roof repair westminster, roof repair thornton",
   alternates: { canonical: "https://roofrepairindenver.com/areas-we-serve" },
 };

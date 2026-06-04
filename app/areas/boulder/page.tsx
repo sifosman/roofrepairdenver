@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Roof Repair Boulder CO | Local Same-Day Service",
-  description: "Professional roof repair in Boulder, Colorado. Emergency service, hail damage, leak repair. Serving all Boulder neighborhoods. Free estimates. Call (720) 555-0199.",
+  description: "Professional roof repair in Boulder, Colorado. Emergency service, hail damage, leak repair. All neighborhoods. Free estimates. Call (720) 555-0199.",
   keywords: "roof repair boulder co, boulder roofing contractor, boulder roof replacement, hail damage repair boulder, emergency roof repair boulder",
   alternates: { canonical: "https://roofrepairindenver.com/areas/boulder" },
 };

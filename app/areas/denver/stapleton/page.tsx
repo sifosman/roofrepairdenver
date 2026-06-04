@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Roof Repair Stapleton / Central Park Denver | Hail Damage Specialists",
-  description: "Expert roof repair in Stapleton and Central Park, Denver. Hail damage, leak repair, and full replacements. Free inspections. We know this neighborhood's roofing needs.",
+  description: "Expert roof repair in Stapleton and Central Park, Denver. Hail damage, leak repair, full replacements. Free inspections. Call (720) 555-0199.",
   keywords: "roof repair stapleton, stapleton denver roof repair, central park denver roofing, hail damage stapleton",
   alternates: { canonical: "https://roofrepairindenver.com/areas/denver/stapleton" },
 };

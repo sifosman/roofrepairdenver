@@ -5,7 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "How Denver's 5,280-Foot Elevation Destroys Roofs Faster | Denver Roof Repair Pros",
-  description: "Denver's altitude exposes roofs to 25% more UV radiation. Learn how elevation accelerates shingle degradation, which materials resist it best, and what homeowners can do.",
+  description: "Denver's altitude exposes roofs to 25% more UV radiation. Learn how elevation accelerates shingle degradation and which materials resist it best.",
   keywords: "denver elevation roof damage, uv radiation roof denver, altitude roofing colorado, asphalt shingle uv degradation",
   alternates: { canonical: "https://roofrepairindenver.com/blog/uv-elevation-roof-damage-denver" },
 };

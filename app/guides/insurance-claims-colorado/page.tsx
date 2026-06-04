@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "How to File a Roof Insurance Claim in Colorado (2026) | Step-by-Step Guide",
-  description: "Step-by-step guide to filing a roof insurance claim in Colorado. Deadlines, deductibles, documentation, supplementing claims, and contractor rules. Avoid claim denial.",
+  description: "Step-by-step guide to filing a roof insurance claim in Colorado. Deadlines, deductibles, documentation, and contractor rules. Avoid denial.",
   keywords: "colorado roof insurance claim, hail damage insurance claim denver, roof claim process colorado, insurance supplementing denver, wind hail deductible colorado",
   alternates: { canonical: "https://roofrepairindenver.com/guides/insurance-claims-colorado" },
 };

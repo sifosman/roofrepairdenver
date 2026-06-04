@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Metal Roofing in Denver | Cost, Durability & Hail Resistance",
-  description: "Metal roofing offers unmatched hail resistance, fire protection, and longevity for Denver homes. Standing seam, corrugated, and metal shingle options. Free estimates.",
+  description: "Metal roofing offers unmatched hail resistance, fire protection, and longevity for Denver homes. Standing seam, corrugated, and shingle options.",
   keywords: "metal roofing denver, metal roof cost colorado, standing seam metal roof denver, metal roof hail resistant, metal roofing aurora",
   alternates: { canonical: "https://roofrepairindenver.com/materials/metal-roofing-denver" },
 };
