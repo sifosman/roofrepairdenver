@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Best Roof Repair in Denver, CO | Denver Roof Repair Pros",
@@ -100,6 +101,7 @@ export default function RootLayout({
       <body className="antialiased">
         <GoogleAnalytics />
         {children}
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
