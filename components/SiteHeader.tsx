@@ -6,7 +6,7 @@ import { useState } from "react";
 const PHONE = "(720) 555-0199";
 const PHONE_HREF = "tel:+17205550199";
 
-type DropdownKey = "services" | "guides" | "blog" | "areas" | "materials" | "resources" | null;
+type DropdownKey = "services" | "guides" | "blog" | "areas" | "materials" | "tools" | "resources" | null;
 
 const navItems: { key: Exclude<DropdownKey, null>; label: string; links: { label: string; href: string }[] }[] = [
   {
@@ -66,6 +66,15 @@ const navItems: { key: Exclude<DropdownKey, null>; label: string; links: { label
       { label: "Asphalt Shingles", href: "/materials/asphalt-shingles-denver" },
       { label: "Metal Roofing", href: "/materials/metal-roofing-denver" },
       { label: "Tile & Slate", href: "/materials/tile-roofing-denver" },
+    ],
+  },
+  {
+    key: "tools",
+    label: "Tools",
+    links: [
+      { label: "Roof Cost Estimator", href: "/tools/roof-cost-calculator" },
+      { label: "Hail Storm Checker", href: "/tools/hail-storm-checker" },
+      { label: "Shingle Savings Calculator", href: "/tools/shingle-savings-calculator" },
     ],
   },
   {

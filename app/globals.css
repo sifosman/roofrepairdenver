@@ -209,6 +209,11 @@ body {
   color: #e2e2e2;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
   .section-heading {
     font-size: 28px;
