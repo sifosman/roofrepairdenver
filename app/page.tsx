@@ -112,7 +112,7 @@ export default function Home() {
         <div className="relative max-w-[1280px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center py-20 lg:py-[80px]">
           <div className="lg:col-span-7 flex flex-col gap-6">
             <h1 className="font-display text-5xl md:text-7xl md:leading-[72px] text-[#e2e2e2] uppercase leading-tight">
-              Your Roof Is Damaged. Your Insurance Won't Pay. We Fight Both.
+              Denver Roof Repair That Fights Your Insurance Claim. Free Inspections.
             </h1>
             <p className="text-lg md:text-xl text-[#c8c5cd] max-w-2xl">
               Free inspection. No obligation. We handle the insurance claim so you don't have to.
