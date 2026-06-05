@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Metal Roofs vs Asphalt Shingles in Denver: 10-Year Cost Comparison | Denver Roof Repair Pros",
   description: "Side-by-side comparison of metal roofing vs asphalt shingles for Denver homes. Hail resistance, UV durability, insurance costs, and true lifetime cost analysis.",
   keywords: "metal roof vs asphalt shingles denver, metal roofing cost colorado, asphalt shingle lifespan denver, metal roof hail resistance",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/metal-vs-asphalt-denver" },
+  alternates: { canonical: canonical("/blog/metal-vs-asphalt-denver") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "Metal Roofs vs Asphalt Shingles in Denver: 10-Year Cost Comparison",
   "description": "Side-by-side comparison of metal and asphalt roofing for Denver's climate.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/metal-vs-asphalt-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

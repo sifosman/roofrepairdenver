@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Can You Repair a Roof in Winter? Denver's Cold-Weather Roofing Reality | Denver Roof Repair Pros",
   description: "Winter roof repair in Denver: what temperatures allow shingle sealing, ice dam risks, emergency tarping options, and when to wait until spring.",
   keywords: "winter roof repair denver, cold weather roofing colorado, roof repair snow denver, ice dam removal denver",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/winter-roof-repair-denver" },
+  alternates: { canonical: canonical("/blog/winter-roof-repair-denver") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "Can You Repair a Roof in Winter? Denver's Cold-Weather Roofing Reality",
   "description": "Everything Denver homeowners need to know about winter roof repairs, temperatures, and limitations.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/winter-roof-repair-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

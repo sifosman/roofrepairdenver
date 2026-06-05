@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Everything Denver Homeowners Should Know After a Hailstorm | Denver Roof Repair Pros",
   description: "Denver gets more hail than any major US city. Here's exactly what to check, what insurance covers, and how to file your roof repair claim.",
   keywords: "denver hail damage, hail damage roof denver, what to do after hailstorm denver, roof hail damage insurance denver",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/denver-hail-damage-guide" },
+  alternates: { canonical: canonical("/blog/denver-hail-damage-guide") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "Everything Denver Homeowners Should Know After a Hailstorm",
   "description": "Denver gets more hail than any major US city. Here's exactly what to check, what insurance covers, and how to file your roof repair claim.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-05-15",
   "dateModified": "2026-05-15",
   "url": "https://roofrepairindenver.com/blog/denver-hail-damage-guide",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

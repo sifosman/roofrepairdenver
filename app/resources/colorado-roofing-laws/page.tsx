@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Colorado Roofing Laws | Claims, Matching & Contractor Rules (2026)",
   description: "Colorado roofing laws every homeowner should know: SB38, deductible rules, contractor licensing, matching shingles, and insurance claim timelines.",
   keywords: "colorado roofing laws, colorado roof insurance claim law, sb38 colorado roofing, roofing contractor license colorado, matching shingles law",
-  alternates: { canonical: "https://roofrepairindenver.com/resources/colorado-roofing-laws" },
+  alternates: { canonical: canonical("/resources/colorado-roofing-laws") },
 };
 
 const articleSchema = {
@@ -16,19 +17,19 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Colorado Roofing Laws: Claims, Matching and Contractor Rules",
   "description": "Essential Colorado roofing laws every homeowner should understand.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/resources/colorado-roofing-laws",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function LawsPage() {
   return (

@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Tallyn's Reach Aurora | Custom Home Specialists",
   description: "Expert roof repair in Tallyn's Reach, Aurora. Custom homes, complex rooflines, hail damage. Free inspections. We know this neighborhood.",
   keywords: "roof repair tallyns reach, tallyns reach aurora roofing, aurora custom home roof repair, hail damage tallyns reach",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/aurora/tallyns-reach" },
+  alternates: { canonical: canonical("/areas/aurora/tallyns-reach") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Tallyn's Reach" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Aurora", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Tallyn's Reach", "Aurora");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function TallynsReachPage() {
   return (

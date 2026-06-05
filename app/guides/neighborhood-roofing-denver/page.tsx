@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Denver Neighborhood Roofing Guide | Challenges & Costs by Area",
   description: "Roof repair and replacement guide for every Denver neighborhood. Housing stock, common roof types, hail vulnerability, and average costs by area.",
   keywords: "denver neighborhood roof repair, park hill roof repair, stapleton roofing, highlands denver roof, cherry creek roofing, aurora roof repair",
-  alternates: { canonical: "https://roofrepairindenver.com/guides/neighborhood-roofing-denver" },
+  alternates: { canonical: canonical("/guides/neighborhood-roofing-denver") },
 };
 
 const articleSchema = {
@@ -16,19 +17,19 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Denver Neighborhood Roofing Guide: Roof Types, Challenges, and Repair Costs by Area",
   "description": "Comprehensive guide to roofing needs across Denver metro neighborhoods.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/guides/neighborhood-roofing-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function NeighborhoodRoofingGuidePage() {
   return (

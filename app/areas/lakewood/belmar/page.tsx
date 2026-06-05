@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Belmar / Green Mountain Lakewood | Local Specialists",
   description: "Expert roof repair in Belmar and Green Mountain, Lakewood. Ranch, split-level, and mixed-use roofing. Hail damage, wind repair. Free inspections.",
   keywords: "roof repair belmar, belmar lakewood roofing, green mountain roof repair, lakewood hail damage",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/lakewood/belmar" },
+  alternates: { canonical: canonical("/areas/lakewood/belmar") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Belmar" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Lakewood", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Belmar", "Lakewood");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BelmarPage() {
   return (

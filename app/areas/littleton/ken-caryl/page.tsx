@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Ken Caryl Littleton | Foothills Roofing Specialists",
   description: "Expert roof repair in Ken Caryl, Littleton. Foothills homes, HOA-compliant materials, hail damage. Free inspections. We know Ken Caryl's roofing needs.",
   keywords: "roof repair ken caryl, ken caryl littleton roofing, littleton hail damage roof, hoa roof replacement ken caryl",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/littleton/ken-caryl" },
+  alternates: { canonical: canonical("/areas/littleton/ken-caryl") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Ken Caryl" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Littleton", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Ken Caryl", "Littleton");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function KenCarylPage() {
   return (

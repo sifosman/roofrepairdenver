@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Free Roof Tools for Denver Homeowners | Denver Roof Repair Pros",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     "Free interactive tools for Denver homeowners: roof cost estimator, hail damage checker, and Class 4 shingle savings calculator. No email required.",
   keywords:
     "roof repair cost denver, hail damage checker denver, roof replacement calculator, class 4 shingle savings, free roofing tools",
-  alternates: { canonical: "https://roofrepairindenver.com/tools" },
+  alternates: { canonical: canonical("/tools") },
 };
 
 const tools = [

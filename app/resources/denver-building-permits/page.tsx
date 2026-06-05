@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Denver Roof Replacement Permits | What You Need to Know (2026)",
   description: "Roofing permit requirements for Denver, Aurora, Lakewood, Boulder, and Littleton. Costs, timelines, and how we handle permitting for you. Free estimates.",
   keywords: "denver roof replacement permit, roofing permit aurora, lakewood roof permit, boulder roofing permit, colorado roof permit cost",
-  alternates: { canonical: "https://roofrepairindenver.com/resources/denver-building-permits" },
+  alternates: { canonical: canonical("/resources/denver-building-permits") },
 };
 
 const articleSchema = {
@@ -16,19 +17,19 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Denver Roof Replacement Permits: What You Need to Know",
   "description": "Permit requirements, costs, and timelines for roof replacement across Denver metro cities.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/resources/denver-building-permits",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function PermitsPage() {
   return (

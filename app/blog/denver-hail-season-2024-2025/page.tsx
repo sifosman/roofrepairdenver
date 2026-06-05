@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The 2024–2025 Denver Hail Season: Damage Reports & Lessons | Denver Roof Repair Pros",
   description: "Complete breakdown of the 2024 and 2025 Denver hail seasons: storm dates, damage costs, neighborhoods hit hardest, and what homeowners learned.",
   keywords: "denver hail season 2024, denver hail season 2025, colorado hail damage reports, denver hailstorm damage",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/denver-hail-season-2024-2025" },
+  alternates: { canonical: canonical("/blog/denver-hail-season-2024-2025") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "The 2024–2025 Denver Hail Season: Damage Reports and What We Learned",
   "description": "Complete breakdown of Denver's recent hail seasons with real damage data and homeowner lessons.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/denver-hail-season-2024-2025",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Class 4 Impact-Resistant Shingles: Are They Worth It in Denver? | Denver Roof Repair Pros",
   description: "Class 4 shingles withstand 2-inch steel ball impacts. In Denver's hail capital, they can mean the difference between repair and replacement.",
   keywords: "class 4 shingles denver, impact resistant shingles colorado, hail proof roof denver, class 4 roof insurance discount",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/class-4-shingles-denver" },
+  alternates: { canonical: canonical("/blog/class-4-shingles-denver") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "Class 4 Impact-Resistant Shingles: Are They Worth It in Denver?",
   "description": "Cost-benefit analysis of Class 4 shingles for Denver homeowners, including insurance discounts and hail resistance data.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/class-4-shingles-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE } from "@/lib/site";
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 const providers = [
   "State Farm", "Allstate", "Farmers", "American Family",
@@ -26,11 +27,14 @@ export default function ShingleSavingsCalculatorPage() {
   const [premium, setPremium] = useState(2200);
   const [showResult, setShowResult] = useState(false);
 
-  const discountRate = provider ? providerDiscounts[provider] : 0;
-  const annualSavings = Math.round(premium * discountRate);
-  const tenYearSavings = annualSavings * 10;
-  const paybackYears = annualSavings > 0 ? (upgradeCost / annualSavings).toFixed(1) : "0";
-  const netTenYear = tenYearSavings - upgradeCost;
+  const { annualSavings, tenYearSavings, paybackYears, netTenYear } = useMemo(() => {
+    const discountRate = provider ? providerDiscounts[provider] : 0;
+    const annualSavings = Math.round(premium * discountRate);
+    const tenYearSavings = annualSavings * 10;
+    const paybackYears = annualSavings > 0 ? (upgradeCost / annualSavings).toFixed(1) : "0";
+    const netTenYear = tenYearSavings - upgradeCost;
+    return { annualSavings, tenYearSavings, paybackYears, netTenYear };
+  }, [provider, premium]);
 
   const handleCalculate = () => {
     if (provider) setShowResult(true);

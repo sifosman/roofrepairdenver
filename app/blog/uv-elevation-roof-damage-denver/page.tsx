@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How Denver's 5,280-Foot Elevation Destroys Roofs Faster | Denver Roof Repair Pros",
   description: "Denver's altitude exposes roofs to 25% more UV radiation. Learn how elevation accelerates shingle degradation and which materials resist it best.",
   keywords: "denver elevation roof damage, uv radiation roof denver, altitude roofing colorado, asphalt shingle uv degradation",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/uv-elevation-roof-damage-denver" },
+  alternates: { canonical: canonical("/blog/uv-elevation-roof-damage-denver") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "How Denver's 5,280-Foot Elevation Destroys Roofs Faster",
   "description": "Science-backed explanation of how Denver's altitude accelerates roof degradation and what homeowners can do.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/uv-elevation-roof-damage-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

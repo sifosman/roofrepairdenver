@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Complete Guide to Roof Hail Damage in Denver (2026) | Denver Roof Repair Pros",
   description: "Denver is the hail capital of the U.S. Learn how hail damages roofs, what to check after a storm, insurance claim deadlines, and repair costs.",
   keywords: "denver hail damage roof, hail damage repair denver, roof hail damage guide colorado, denver hail capital, hail insurance claim denver",
-  alternates: { canonical: "https://roofrepairindenver.com/guides/hail-damage-denver" },
+  alternates: { canonical: canonical("/guides/hail-damage-denver") },
 };
 
 const articleSchema = {
@@ -16,11 +17,11 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Complete Guide to Roof Hail Damage in Denver",
   "description": "Data-driven guide to Denver hail damage: storm history, insurance claims, repair costs, and what every homeowner needs to know.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
@@ -74,8 +75,8 @@ const faqSchema = {
   ],
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function HailDamageGuidePage() {
   return (

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/next";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Best Roof Repair in Denver, CO | Denver Roof Repair Pros",
@@ -9,14 +10,14 @@ export const metadata: Metadata = {
     "Professional roof repair in Denver, CO. Emergency service available 24/7. Licensed roofers serving Aurora, Lakewood & Littleton. Call (720) 555-0199.",
   keywords:
     "roof repair denver, roof repair denver co, emergency roof repair denver, hail damage repair denver, roof replacement denver, roof inspection denver, roofing contractor denver, aurora roof repair, lakewood roof repair, littleton roof repair",
-  metadataBase: new URL("https://roofrepairindenver.com"),
-  alternates: { canonical: "https://roofrepairindenver.com/" },
+  metadataBase: new URL(SITE.url),
+  alternates: { canonical: `${SITE.url}/` },
   openGraph: {
     title: "Best Roof Repair in Denver, CO | Denver Roof Repair Pros",
     description:
       "Professional roof repair in Denver, CO. Emergency roof repair available 24/7. Licensed roofers serving the Denver metro area.",
-    url: "https://roofrepairindenver.com/",
-    siteName: "Denver Roof Repair Pros",
+    url: `${SITE.url}/`,
+    siteName: SITE.name,
     type: "website",
   },
   twitter: {
@@ -35,11 +36,11 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
+  "name": SITE.name,
   "description":
     "Professional roof repair, hail damage restoration, emergency roof repair, and insurance claim assistance in Denver, Colorado and surrounding metro areas.",
-  "url": "https://roofrepairindenver.com",
-  "telephone": "+17205550199",
+  "url": SITE.url,
+  "telephone": SITE.phone.raw,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Denver",

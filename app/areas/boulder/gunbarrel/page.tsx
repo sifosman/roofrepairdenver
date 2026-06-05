@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Gunbarrel Boulder | High-Elevation Specialists",
   description: "Expert roof repair in Gunbarrel, Boulder. Higher elevation homes, stricter codes, premium materials. Hail damage, UV protection. Free inspections.",
   keywords: "roof repair gunbarrel, gunbarrel boulder roofing, boulder roof repair, high elevation roof colorado",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/boulder/gunbarrel" },
+  alternates: { canonical: canonical("/areas/boulder/gunbarrel") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Gunbarrel" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Boulder", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Gunbarrel", "Boulder");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function GunbarrelPage() {
   return (

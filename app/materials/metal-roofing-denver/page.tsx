@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Metal Roofing in Denver | Cost, Durability & Hail Resistance",
   description: "Metal roofing offers unmatched hail resistance, fire protection, and longevity for Denver homes. Standing seam, corrugated, and shingle options.",
   keywords: "metal roofing denver, metal roof cost colorado, standing seam metal roof denver, metal roof hail resistant, metal roofing aurora",
-  alternates: { canonical: "https://roofrepairindenver.com/materials/metal-roofing-denver" },
+  alternates: { canonical: canonical("/materials/metal-roofing-denver") },
 };
 
 const serviceSchema = {
@@ -17,17 +18,17 @@ const serviceSchema = {
   "name": "Metal Roofing in Denver",
   "provider": {
     "@type": "RoofingContractor",
-    "name": "Denver Roof Repair Pros",
-    "telephone": "+17205550199",
-    "url": "https://roofrepairindenver.com/",
+    "name": SITE.name,
+    "telephone": SITE.phone.raw,
+    "url": SITE.url,
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",
   "description": "Metal roofing installation and repair in Denver. Hail-resistant, fire-resistant, long-lasting.",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function MaterialPage() {
   return (

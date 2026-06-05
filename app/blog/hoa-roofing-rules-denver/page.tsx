@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "HOA Roofing Rules in Denver Metro Communities: What You Need to Know | Denver Roof Repair Pros",
   description: "Denver metro HOA roofing restrictions explained. Common rules, approval processes, approved materials, and how to avoid disputes when replacing your roof.",
   keywords: "hoa roofing rules denver, hoa roof replacement approval colorado, hoa approved roofing materials denver",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/hoa-roofing-rules-denver" },
+  alternates: { canonical: canonical("/blog/hoa-roofing-rules-denver") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "HOA Roofing Rules in Denver Metro Communities: What You Need to Know",
   "description": "Navigate Denver metro HOA roofing restrictions and approval processes.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/hoa-roofing-rules-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

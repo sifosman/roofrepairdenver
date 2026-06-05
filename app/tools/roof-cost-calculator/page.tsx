@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE } from "@/lib/site";
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 type HomeSize = "small" | "medium" | "large";
 type Stories = 1 | 2 | 3;
@@ -63,7 +64,7 @@ export default function RoofCostCalculatorPage() {
     }
   };
 
-  const getEstimate = (): [number, number] => {
+  const [lowEst, highEst] = useMemo(() => {
     if (!size || !stories || !material) return [0, 0];
     const [low, high] = baseCosts[size];
     const sMult = storyMultipliers[stories];
@@ -71,11 +72,9 @@ export default function RoofCostCalculatorPage() {
     const lowTotal = Math.round((low * sMult * mMult + permitRange[0]) / 100) * 100;
     const highTotal = Math.round((high * sMult * mMult + permitRange[1]) / 100) * 100;
     return [lowTotal, highTotal];
-  };
+  }, [size, stories, material]);
 
-  const [lowEst, highEst] = getEstimate();
-
-  const step = size ? (stories ? (material ? 3 : 2) : 1) : 0;
+  const step = useMemo(() => (size ? (stories ? (material ? 3 : 2) : 1) : 0), [size, stories, material]);
 
   return (
     <>

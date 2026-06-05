@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Asphalt Shingle Roofing in Denver | Best Brands for Hail & UV",
   description: "Asphalt shingles are the most popular roofing material in Denver. Learn which brands and styles perform best in Colorado's hail and UV climate. Free estimates.",
   keywords: "asphalt shingles denver, best shingles colorado, architectural shingles denver, 3 tab shingles denver, hail resistant shingles denver",
-  alternates: { canonical: "https://roofrepairindenver.com/materials/asphalt-shingles-denver" },
+  alternates: { canonical: canonical("/materials/asphalt-shingles-denver") },
 };
 
 const serviceSchema = {
@@ -17,17 +18,17 @@ const serviceSchema = {
   "name": "Asphalt Shingle Roofing in Denver",
   "provider": {
     "@type": "RoofingContractor",
-    "name": "Denver Roof Repair Pros",
-    "telephone": "+17205550199",
-    "url": "https://roofrepairindenver.com/",
+    "name": SITE.name,
+    "telephone": SITE.phone.raw,
+    "url": SITE.url,
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",
   "description": "Asphalt shingle roofing services in Denver. Best brands for hail and UV resistance.",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function MaterialPage() {
   return (

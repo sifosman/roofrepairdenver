@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Roofing Warranties in Colorado: What Actually Covers Hail Damage? | Denver Roof Repair Pros",
   description: "Manufacturer vs. contractor warranties explained. What hail damage is actually covered, what's excluded, and how Colorado's climate affects warranty claims.",
   keywords: "roofing warranty colorado, hail damage warranty, shingle warranty denver, roof warranty exclusions",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/roofing-warranties-colorado" },
+  alternates: { canonical: canonical("/blog/roofing-warranties-colorado") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "Roofing Warranties in Colorado: What Actually Covers Hail Damage?",
   "description": "Understanding what roofing warranties cover and exclude in Colorado, especially regarding hail damage.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/roofing-warranties-colorado",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

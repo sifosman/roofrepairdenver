@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Denver Roof Replacement Guide 2026 | Costs, Materials & Timeline",
   description: "Complete 2026 guide to Denver roof replacement costs, best materials for Colorado's climate, permit requirements, and what to expect. Free estimates.",
   keywords: "denver roof replacement cost 2026, roof replacement denver, best roofing materials colorado, asphalt shingles denver, metal roof denver cost",
-  alternates: { canonical: "https://roofrepairindenver.com/guides/roof-replacement-denver" },
+  alternates: { canonical: canonical("/guides/roof-replacement-denver") },
 };
 
 const articleSchema = {
@@ -16,19 +17,19 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Denver Roof Replacement Guide: Costs, Materials, and What to Expect in 2026",
   "description": "Complete guide to Denver roof replacement costs, materials best for Colorado's climate, and the full process from inspection to completion.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/guides/roof-replacement-denver",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function RoofReplacementGuidePage() {
   return (

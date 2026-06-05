@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Olde Town Arvada | Historic & New Home Specialists",
   description: "Expert roof repair in Olde Town Arvada and Candelas. Historic homes, new construction, hail damage. Free inspections. We know Arvada's roofing needs.",
   keywords: "roof repair olde town arvada, arvada roofing contractor, candelas arvada roof repair, hail damage arvada",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/arvada/olde-town" },
+  alternates: { canonical: canonical("/areas/arvada/olde-town") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Olde Town Arvada" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Arvada", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Olde Town Arvada", "Arvada");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function OldeTownPage() {
   return (

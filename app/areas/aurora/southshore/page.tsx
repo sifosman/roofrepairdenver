@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Southshore Aurora | Hail Damage Specialists",
   description: "Expert roof repair in Southshore, Aurora. Master-planned community roofing. Hail damage, HOA-compliant replacements. Free inspections.",
   keywords: "roof repair southshore, southshore aurora roofing, aurora hail damage roof, hoa roof replacement aurora",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/aurora/southshore" },
+  alternates: { canonical: canonical("/areas/aurora/southshore") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Southshore" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Aurora", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Southshore", "Aurora");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function SouthshorePage() {
   return (

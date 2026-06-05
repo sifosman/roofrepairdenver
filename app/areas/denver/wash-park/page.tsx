@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Washington Park Denver | Historic Home Specialists",
   description: "Expert roof repair in Washington Park, Denver. Historic homes, cedar shake, slate, asphalt. Free inspections. Call (720) 555-0199.",
   keywords: "roof repair wash park, washington park denver roofing, historic roof repair denver, cedar shake roof denver",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/denver/wash-park" },
+  alternates: { canonical: canonical("/areas/denver/wash-park") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Washington Park" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Washington Park");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function WashParkPage() {
   return (

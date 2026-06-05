@@ -3,12 +3,13 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Tile & Slate Roofing in Denver | Pros, Cons & Climate Fit",
   description: "Tile and slate roofing in Denver: longevity, fire resistance, and hail vulnerability. Clay, concrete, and synthetic tile options for Colorado homes.",
   keywords: "tile roofing denver, slate roof denver, clay tile colorado, concrete tile roof denver, synthetic tile roofing",
-  alternates: { canonical: "https://roofrepairindenver.com/materials/tile-roofing-denver" },
+  alternates: { canonical: canonical("/materials/tile-roofing-denver") },
 };
 
 const serviceSchema = {
@@ -17,17 +18,17 @@ const serviceSchema = {
   "name": "Tile and Slate Roofing in Denver",
   "provider": {
     "@type": "RoofingContractor",
-    "name": "Denver Roof Repair Pros",
-    "telephone": "+17205550199",
-    "url": "https://roofrepairindenver.com/",
+    "name": SITE.name,
+    "telephone": SITE.phone.raw,
+    "url": SITE.url,
     "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
   },
   "areaServed": "Denver, CO",
   "description": "Tile and slate roofing installation and repair in Denver.",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function MaterialPage() {
   return (

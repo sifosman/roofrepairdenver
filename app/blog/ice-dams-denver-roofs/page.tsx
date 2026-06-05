@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Are Ice Dams a Real Problem in Denver? | Denver Roof Repair Pros",
   description: "Ice dams in Denver: causes, risks, prevention, and removal. How freeze-thaw cycles create ice dams and what homeowners can do to protect their roofs.",
   keywords: "ice dams denver, denver roof ice dam removal, ice dam prevention colorado, freeze thaw roof damage denver",
-  alternates: { canonical: "https://roofrepairindenver.com/blog/ice-dams-denver-roofs" },
+  alternates: { canonical: canonical("/blog/ice-dams-denver-roofs") },
 };
 
 const articleSchema = {
@@ -15,19 +16,19 @@ const articleSchema = {
   "@type": "BlogPosting",
   "headline": "Are Ice Dams a Real Problem in Denver?",
   "description": "Understanding ice dam risks, prevention, and removal for Denver homeowners.",
-  "author": { "@type": "Organization", "name": "Denver Roof Repair Pros" },
+  "author": { "@type": "Organization", "name": SITE.name },
   "publisher": {
     "@type": "Organization",
-    "name": "Denver Roof Repair Pros",
-    "logo": { "@type": "ImageObject", "url": "https://roofrepairindenver.com/favicon.svg" },
+    "name": SITE.name,
+    "logo": { "@type": "ImageObject", "url": `${SITE.url}/favicon.svg` },
   },
   "datePublished": "2026-06-01",
   "dateModified": "2026-06-01",
   "url": "https://roofrepairindenver.com/blog/ice-dams-denver-roofs",
 };
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function BlogPostPage() {
   return (

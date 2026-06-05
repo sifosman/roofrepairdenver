@@ -3,26 +3,20 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ContactForm from "@/components/ContactForm";
+import { SITE, canonical } from "@/lib/site";
+import { localRoofingSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Roof Repair Stapleton / Central Park Denver | Hail Damage Specialists",
   description: "Expert roof repair in Stapleton and Central Park, Denver. Hail damage, leak repair, full replacements. Free inspections. Call (720) 555-0199.",
   keywords: "roof repair stapleton, stapleton denver roof repair, central park denver roofing, hail damage stapleton",
-  alternates: { canonical: "https://roofrepairindenver.com/areas/denver/stapleton" },
+  alternates: { canonical: canonical("/areas/denver/stapleton") },
 };
 
-const localSchema = {
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "name": "Denver Roof Repair Pros",
-  "telephone": "+17205550199",
-  "url": "https://roofrepairindenver.com/",
-  "areaServed": { "@type": "Place", "name": "Stapleton" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
-};
+const localSchema = localRoofingSchema("Stapleton");
 
-const PHONE = "(720) 555-0199";
-const PHONE_HREF = "tel:+17205550199";
+const PHONE = SITE.phone.display;
+const PHONE_HREF = SITE.phone.href;
 
 export default function StapletonPage() {
   return (
